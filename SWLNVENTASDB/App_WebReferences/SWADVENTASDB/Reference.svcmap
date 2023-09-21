@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="558a2561-06e1-4951-9257-b83b38cdcac1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53766/SWADVENTASDB.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="997b6fd6-0c7b-47e0-8bfd-c299a99fb156" SourceId="1" SourceUrl="http://localhost:53766/SWADVENTASDB.svc?wsdl" />
+    <MetadataFile FileName="SWADVENTASDB.xsd" MetadataType="Schema" ID="dc12a0a0-eefe-4234-81db-59b2787a99af" SourceId="1" SourceUrl="http://localhost:53766/SWADVENTASDB.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWADVENTASDB1.xsd" MetadataType="Schema" ID="d494a325-c7a9-4a16-be03-523cba4eb67a" SourceId="1" SourceUrl="http://localhost:53766/SWADVENTASDB.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWADVENTASDB.disco" MetadataType="Disco" ID="bcfe4563-9fae-49a2-bf97-df0f1477a901" SourceId="1" SourceUrl="http://localhost:53766/SWADVENTASDB.svc?disco" />
+    <MetadataFile FileName="SWADVENTASDB2.xsd" MetadataType="Schema" ID="7699ed2c-5abd-4211-a21e-2edd7a604b49" SourceId="1" SourceUrl="http://localhost:53766/SWADVENTASDB.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADVENTASDB", "SWADVENTASDB\", "{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53766"
+		Debug.AspNetCompiler.PhysicalPath = "SWADVENTASDB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53766\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53766"
+		Release.AspNetCompiler.PhysicalPath = "SWADVENTASDB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53766\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53766"
+		SlnRelativePath = "SWADVENTASDB\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNVENTASDB", "SWLNVENTASDB\", "{46D34E64-0CD1-4497-B3F9-A24D853CD897}"
+	ProjectSection(ProjectDependencies) = postProject
+		{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B} = {314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53791"
+		Debug.AspNetCompiler.PhysicalPath = "SWLNVENTASDB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53791\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53791"
+		Release.AspNetCompiler.PhysicalPath = "SWLNVENTASDB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53791\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53791"
+		SlnRelativePath = "SWLNVENTASDB\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WAVENTASDB", "WAVENTASDB\", "{9B8A6ADE-8D8C-4B03-84CC-7458F6C86580}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46D34E64-0CD1-4497-B3F9-A24D853CD897} = {46D34E64-0CD1-4497-B3F9-A24D853CD897}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54277"
+		Debug.AspNetCompiler.PhysicalPath = "WAVENTASDB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54277\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54277"
+		Release.AspNetCompiler.PhysicalPath = "WAVENTASDB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54277\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54277"
+		SlnRelativePath = "WAVENTASDB\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F22A3-8A1D-42FB-BE6C-D3B9CB4B9C6B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{46D34E64-0CD1-4497-B3F9-A24D853CD897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D34E64-0CD1-4497-B3F9-A24D853CD897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D34E64-0CD1-4497-B3F9-A24D853CD897}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D34E64-0CD1-4497-B3F9-A24D853CD897}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9B8A6ADE-8D8C-4B03-84CC-7458F6C86580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8A6ADE-8D8C-4B03-84CC-7458F6C86580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8A6ADE-8D8C-4B03-84CC-7458F6C86580}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8A6ADE-8D8C-4B03-84CC-7458F6C86580}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.SqlCe.5.0.505.0\lib\NET35
+		SolutionGuid = {E90BA524-77A9-4E63-AF49-A6F38B1ACA61}
+	EndGlobalSection
+EndGlobal
