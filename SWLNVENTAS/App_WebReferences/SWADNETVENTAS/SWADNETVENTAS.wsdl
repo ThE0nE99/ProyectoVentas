@@ -7,32 +7,72 @@
       <xsd:import schemaLocation="http://localhost:59438/SWADNETVENTAS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ISWADNETVENTAS_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O_SiguienteCodigoCliente" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O_SiguienteCodigoClienteResponse" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="ISWADNETVENTAS_Insertar_VCliente_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VCliente_I" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="ISWADNETVENTAS_Insertar_VCliente_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VCliente_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VCliente_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VCliente_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Actualizar_VCliente_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VCliente_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Actualizar_VCliente_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VCliente_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VClientes_O_Todo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VClientes_O_Todo" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VClientes_O_Todo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VClientes_O_TodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Eliminar_VCliente_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VCliente_E" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVENTAS_Eliminar_VCliente_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VCliente_EResponse" />
   </wsdl:message>
   <wsdl:portType name="ISWADNETVENTAS">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/GetData" message="tns:ISWADNETVENTAS_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/GetDataResponse" message="tns:ISWADNETVENTAS_GetData_OutputMessage" />
+    <wsdl:operation name="Obtener_VCliente_O_SiguienteCodigoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_O_SiguienteCodigoCliente" message="tns:ISWADNETVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_O_SiguienteCodigoClienteResponse" message="tns:ISWADNETVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/GetDataUsingDataContract" message="tns:ISWADNETVENTAS_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/GetDataUsingDataContractResponse" message="tns:ISWADNETVENTAS_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="Insertar_VCliente_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VCliente_I" message="tns:ISWADNETVENTAS_Insertar_VCliente_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VCliente_IResponse" message="tns:ISWADNETVENTAS_Insertar_VCliente_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_O" message="tns:ISWADNETVENTAS_Obtener_VCliente_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_OResponse" message="tns:ISWADNETVENTAS_Obtener_VCliente_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VCliente_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Actualizar_VCliente_A" message="tns:ISWADNETVENTAS_Actualizar_VCliente_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Actualizar_VCliente_AResponse" message="tns:ISWADNETVENTAS_Actualizar_VCliente_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VClientes_O_Todo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VClientes_O_Todo" message="tns:ISWADNETVENTAS_Obtener_VClientes_O_Todo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VClientes_O_TodoResponse" message="tns:ISWADNETVENTAS_Obtener_VClientes_O_Todo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VCliente_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Eliminar_VCliente_E" message="tns:ISWADNETVENTAS_Eliminar_VCliente_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Eliminar_VCliente_EResponse" message="tns:ISWADNETVENTAS_Eliminar_VCliente_E_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWADNETVENTAS" type="tns:ISWADNETVENTAS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/GetData" style="document" />
+    <wsdl:operation name="Obtener_VCliente_O_SiguienteCodigoCliente">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_O_SiguienteCodigoCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -40,8 +80,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="Insertar_VCliente_I">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Insertar_VCliente_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VCliente_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VCliente_A">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Actualizar_VCliente_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VClientes_O_Todo">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VClientes_O_Todo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VCliente_E">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Eliminar_VCliente_E" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -10,9 +10,22 @@ using System.Text;
 [ServiceContract]
 public interface ISWADNETVENTAS
 {
-    #region Tabla: 1
+    #region Tabla: VCliente
 
+    [OperationContract]
+    int Obtener_VCliente_O_SiguienteCodigoCliente();
+    [OperationContract]
+    void Insertar_VCliente_I(EVCliente cliente);
+    [OperationContract]
+    EVCliente Obtener_VCliente_O(int codigoCliente);
+    [OperationContract]
+    void Actualizar_VCliente_A(EVCliente cliente);
+    [OperationContract]
+    List<EVCliente> Obtener_VClientes_O_Todo();
+    [OperationContract]
+    void Eliminar_VCliente_E(int codigoCliente);
     #endregion
+
 
     #region Tabla: 2
 
