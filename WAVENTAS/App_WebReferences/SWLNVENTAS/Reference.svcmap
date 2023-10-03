@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a5d3bcc6-21f2-46a6-9c01-7fcaba2bebf2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59753/SWLNVENTAS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SWLNVENTAS.xsd" MetadataType="Schema" ID="2d62b676-f0ca-44c2-87c1-7ae635629bca" SourceId="1" SourceUrl="http://localhost:59753/SWLNVENTAS.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWLNVENTAS1.xsd" MetadataType="Schema" ID="9752cc2f-519c-4c88-9a0e-0a88fae26857" SourceId="1" SourceUrl="http://localhost:59753/SWLNVENTAS.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWLNVENTAS2.xsd" MetadataType="Schema" ID="5b478925-9aeb-4b5b-aa3c-3c907c64d585" SourceId="1" SourceUrl="http://localhost:59753/SWLNVENTAS.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWLNVENTAS.disco" MetadataType="Disco" ID="d7d8fb7c-efbf-47dd-87f1-7052e5dbb06f" SourceId="1" SourceUrl="http://localhost:59753/SWLNVENTAS.svc?disco" />
+    <MetadataFile FileName="SWLNVENTAS.wsdl" MetadataType="Wsdl" ID="26c28542-031f-47f3-aab4-92a7bdc10e7b" SourceId="1" SourceUrl="http://localhost:59753/SWLNVENTAS.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

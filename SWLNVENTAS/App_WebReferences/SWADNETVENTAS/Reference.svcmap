@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="867fd951-5a9b-4351-a6be-34ae9c7ab475" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59438/SWADNETVENTAS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SWADNETVENTAS.wsdl" MetadataType="Wsdl" ID="cfaaac12-d88e-4912-ab5c-30724673b97c" SourceId="1" SourceUrl="http://localhost:59438/SWADNETVENTAS.svc?wsdl" />
+    <MetadataFile FileName="SWADNETVENTAS.xsd" MetadataType="Schema" ID="5ba26092-f484-4d58-8717-7bea0bab6c32" SourceId="1" SourceUrl="http://localhost:59438/SWADNETVENTAS.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWADNETVENTAS1.xsd" MetadataType="Schema" ID="7059fe3d-fcae-4301-9a5b-89aa0a1d90ee" SourceId="1" SourceUrl="http://localhost:59438/SWADNETVENTAS.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWADNETVENTAS2.xsd" MetadataType="Schema" ID="30d2fbaf-e698-4e60-b0d1-5e430b985adc" SourceId="1" SourceUrl="http://localhost:59438/SWADNETVENTAS.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWADNETVENTAS.disco" MetadataType="Disco" ID="84fd24ed-ce46-4061-8a1e-dd5038bb4b68" SourceId="1" SourceUrl="http://localhost:59438/SWADNETVENTAS.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
