@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWADNETVENTAS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -18,9 +19,27 @@ public interface ISWLNVENTAS
 
     #endregion
 
-    #region Tabla: 3
-
+    #region Tabla: VUsuario
+    // Obtener último id
+    [OperationContract]
+    int Obtener_VUsuario_O_SiguienteCodigoUsuario();
+    // Insertar
+    [OperationContract]
+    void Insertar_VUsuario_I(int codigoUsuario, string nombresUsuario, string apellidosUsuario, string celularUsuario, string correoUsuario, string claveUsuario, string rolUsuario);
+    // Obtener un registro
+    [OperationContract]
+    EVUsuario Obtener_VUsuario_O(int codigoUsuario);
+    // Actualizar
+    [OperationContract]
+    void Actualizar_VUsuario_A(int codigoUsuario, string nombresUsuario, string apellidosUsuario, string celularUsuario, string correoUsuario, string claveUsuario, string rolUsuario, string estado);
+    // Obtener todos los registros
+    [OperationContract]
+    List<EVUsuario> Obtener_VUsuario_O_Todo();
+    // Eliminar
+    [OperationContract]
+    void Eliminar_VUsuario_E(int codigoUsuario);
     #endregion
+
 
     #region Tabla: 4
 

@@ -5,10 +5,14 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Descripción breve de LNServicio
+/// Descripción breve de CUsuario
 /// </summary>
-public class LNServicio
+public class CUsuario
 {
+    #region Atributos
+    private LNServicio lnServicio;
+    #endregion
+
     #region Propiedades
     public string NombreClase
     {
@@ -17,48 +21,32 @@ public class LNServicio
     #endregion
 
     #region Constructor
-    public LNServicio()
+    public CUsuario()
     {
+        lnServicio = new LNServicio();
     }
     #endregion
 
-    #region Métodos públicos
-
-    #region Tabla: 1
-
-    #endregion
-
-    #region Tabla: 2
-
-    #endregion
-
-    #region Tabla: VUsuario
+    #region Metodos Publicos
     // Obtener último id
     public int Obtener_VUsuario_O_SiguienteCodigoUsuario()
     {
-        int resultado = 0;
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                resultado = swlnVENTAS.Obtener_VUsuario_O_SiguienteCodigoUsuario();
-            }
+            return lnServicio.Obtener_VUsuario_O_SiguienteCodigoUsuario();
+
         }
         catch (Exception)
         {
             throw;
         }
-        return resultado;
     }
     // Insertar
     public void Insertar_VUsuario_I(int codigoUsuario, string nombresUsuario, string apellidosUsuario, string celularUsuario, string correoUsuario, string claveUsuario, string rolUsuario)
     {
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                swlnVENTAS.Insertar_VUsuario_I(codigoUsuario, nombresUsuario, apellidosUsuario, celularUsuario, correoUsuario, claveUsuario, rolUsuario);
-            }
+            lnServicio.Insertar_VUsuario_I(codigoUsuario, nombresUsuario, apellidosUsuario, celularUsuario, correoUsuario, claveUsuario, rolUsuario);
         }
         catch (Exception)
         {
@@ -68,29 +56,21 @@ public class LNServicio
     // Obtener un registro
     public EVUsuario Obtener_VUsuario_O(int codigoUsuario)
     {
-        EVUsuario eVUsuario = new EVUsuario();
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                eVUsuario = swlnVENTAS.Obtener_VUsuario_O(codigoUsuario);
-            }
+            return lnServicio.Obtener_VUsuario_O(codigoUsuario);
         }
         catch (Exception)
         {
             throw;
         }
-        return eVUsuario;
     }
     // Actualizar
     public void Actualizar_VUsuario_A(int codigoUsuario, string nombresUsuario, string apellidosUsuario, string celularUsuario, string correoUsuario, string claveUsuario, string rolUsuario, string estado)
     {
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                swlnVENTAS.Actualizar_VUsuario_A(codigoUsuario, nombresUsuario, apellidosUsuario, celularUsuario, correoUsuario, claveUsuario, rolUsuario, estado);
-            }
+            lnServicio.Actualizar_VUsuario_A(codigoUsuario, nombresUsuario, apellidosUsuario, celularUsuario, correoUsuario, claveUsuario, rolUsuario, estado);
         }
         catch (Exception)
         {
@@ -100,40 +80,28 @@ public class LNServicio
     // Obtener todos los registros
     public List<EVUsuario> Obtener_VUsuario_O_Todo()
     {
-        List<EVUsuario> lstEVUsuario = new List<EVUsuario>();
+
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                lstEVUsuario = swlnVENTAS.Obtener_VUsuario_O_Todo().ToList();
-            }
+            return lnServicio.Obtener_VUsuario_O_Todo();
         }
         catch (Exception)
         {
             throw;
         }
-        return lstEVUsuario;
+
     }
     // Eliminar
     public void Eliminar_VUsuario_E(int codigoUsuario)
     {
         try
         {
-            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
-            {
-                swlnVENTAS.Eliminar_VUsuario_E(codigoUsuario);
-            }
+            lnServicio.Eliminar_VUsuario_E(codigoUsuario);
         }
         catch (Exception)
         {
             throw;
         }
     }
-    #endregion
-
-    #region Tabla: 4
-
-    #endregion
-
     #endregion
 }
