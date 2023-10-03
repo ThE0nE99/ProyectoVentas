@@ -10,5 +10,20 @@ using System.Text;
 [ServiceContract]
 public interface ISWLNVENTAS
 {
+    #region Tabla: 1
+
+    #endregion
+
+    #region Tabla: 2
+
+    #endregion
+
+    #region Tabla: 3
+
+    #endregion
+
+    #region Tabla: 4
+
+    #endregion
 }
 
