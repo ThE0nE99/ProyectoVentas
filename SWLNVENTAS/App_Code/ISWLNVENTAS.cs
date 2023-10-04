@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWADNETVENTAS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -10,7 +11,20 @@ using System.Text;
 [ServiceContract]
 public interface ISWLNVENTAS
 {
-    #region Tabla: 1
+
+    #region Tabla: VArticulos
+    [OperationContract]
+    int Obtener_VArticulo_O_SiguienteCodigoArticulo();
+    [OperationContract]
+    void Insertar_VArticulo_I(int codigoArticulo, string categoriaArticulo, string nombreArticulo, double precioCompraArticulo, double precioVentaArticulo, int stockArticulo);
+    [OperationContract]
+    EVArticulo Obtener_VArticulo_O(int codigoArticulo);
+    [OperationContract]
+    void Actualizar_VArticulo_A(int codigoArticulo, string categoriaArticulo, string nombreArticulo, double precioCompraArticulo, double precioVentaArticulo, int stockArticulo);
+    [OperationContract]
+    List<EVArticulo> Obtener_VArticulo_O_Todo();
+    [OperationContract]
+    void Eliminar_VArticulo_E(int codigoArticulo);
 
     #endregion
 
