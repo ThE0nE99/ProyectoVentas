@@ -19,6 +19,14 @@ public interface ISWLNVENTAS
 
     #endregion
 
+    #region Registo de la Venta
+
+    // Insertar
+    [OperationContract]
+    void Insertar_Venta(EVenta eVenta, List<EDetalleVenta> lstDetalleVentas);
+
+    #endregion
+
     #region Tabla: VUsuario
     // Obtener último id
     [OperationContract]

@@ -32,6 +32,45 @@ public class LNServicio
 
     #endregion
 
+    #region Tabla: VVenta
+    
+    // Insertar
+    public void Insertar_Venta(EVenta eVenta, List<EDetalleVenta> lstDetalleVenta)
+    {
+        try
+        {
+            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
+            {
+                // Convierte la lista en un arreglo
+                //EDetalleVenta[] arregloDetalleVenta = lstDetalleVenta.ToArray();
+                swlnVENTAS.Insertar_Venta(eVenta, lstDetalleVenta.ToArray());
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    // Obtener un registro
+    /*
+    public EVVenta Obtener_VVenta_O(int codigoUsuario)
+    {
+        EVVenta eVVenta = new EVVenta();
+        try
+        {
+            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
+            {
+                eVVenta = swlnVENTAS.Obtener_VVenta_O(codigoUsuario);
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return eVVenta;
+    }*/
+    #endregion
+
     #region Tabla: VUsuario
     // Obtener último id
     public int Obtener_VUsuario_O_SiguienteCodigoUsuario()

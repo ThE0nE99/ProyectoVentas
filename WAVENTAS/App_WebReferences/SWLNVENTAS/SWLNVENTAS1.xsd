@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaHoraVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImpuestoVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalVenta" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVenta" nillable="true" type="tns:EVenta" />
+  <xs:complexType name="ArrayOfEDetalleVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDetalleVenta" nillable="true" type="tns:EDetalleVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDetalleVenta" nillable="true" type="tns:ArrayOfEDetalleVenta" />
+  <xs:complexType name="EDetalleVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadDetalleVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoDetalleVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="DescuentoDetalleVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="PrecioDetalleVenta" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDetalleVenta" nillable="true" type="tns:EDetalleVenta" />
   <xs:complexType name="EVUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApellidosUsuario" nillable="true" type="xs:string" />

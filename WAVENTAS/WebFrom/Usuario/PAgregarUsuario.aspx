@@ -3,8 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>Formulario de Registro de Usuario</h2>
-
+    <h1>Formulario de Registro de Usuario</h1>
+        <hr />
+        <h3>Insertar</h3>
+    <div>
         <div>
             <label for="txtNombres">Nombres:</label>
             <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control" />
@@ -27,33 +29,96 @@
         </div>
         <div>
             <label for="ddlRol">Rol de Usuario:</label>
-            <asp:DropDownList ID="ddlRol" runat="server" CssClass="form-control">
+            <asp:DropDownList ID="CmbRol" runat="server" CssClass="form-control">
                 <asp:ListItem Text="Seleccionar Rol" Value="" />
-                <asp:ListItem Text="Rol 1" Value="A" />
-                <asp:ListItem Text="Rol 2" Value="B" />
+                <asp:ListItem Text="Estudiante" Value="ES" />
+                <asp:ListItem Text="Administrativo" Value="AD" />
                 
             </asp:DropDownList>
         </div>
         <div>
             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-primary" />
         </div>
-    <asp:Label ID="lblCodigo" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblApellido" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblContacto" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblClave" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
-
-    <asp:GridView ID="GridViewUsuarios" runat="server" AutoGenerateColumns="False">
-    <Columns>
-        <asp:BoundField DataField="NombresUsuario" HeaderText="Nombres" />
-        <asp:BoundField DataField="ApellidosUsuario" HeaderText="Apellidos" />
-        <asp:BoundField DataField="CelularUsuario" HeaderText="Celular" />
-        <asp:BoundField DataField="CorreoUsuario" HeaderText="Correo" />
-        <asp:BoundField DataField="ClaveUsuario" HeaderText="Clave" />
-        <asp:BoundField DataField="Estado" HeaderText="Estado" />
-    </Columns>
-</asp:GridView>
+    </div>
+     <hr />
+        <h3>Ver datos</h3>
+    <div>
+        <div>
+            <label for="txtId">Codigo Usuario:</label>
+            <asp:TextBox ID="txtId" runat="server" CssClass="form-control" />
+        </div>
+         <div>
+            <asp:Button ID="Button1" runat="server" Text="Ver datos" OnClick="btnVerDatos_Click" CssClass="btn btn-primary" />
+        </div>
+        <asp:Label ID="lblCodigo" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblApellido" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblContacto" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblClave" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+    </div>
+    
+        <hr />
+        <h3>Editar</h3>
+    <div>
+        <div>
+            <label for="txtIdEditar">Codigo Usuario:</label>
+            <asp:TextBox ID="txtIdEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <asp:Button ID="btnBuscarEditar" runat="server" Text="Buscar" OnClick="btnBuscarEditar_Click" CssClass="btn btn-primary" />
+        </div>
+        <div>
+            <label for="txtNombresEditar">Nombres:</label>
+            <asp:TextBox ID="txtNombresEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <label for="txtApellidosEditar">Apellidos:</label>
+            <asp:TextBox ID="txtApellidosEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <label for="txtCelularEditar">Celular:</label>
+            <asp:TextBox ID="txtCelularEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <label for="txtCorreoEditar">Correo Electrónico:</label>
+            <asp:TextBox ID="txtCorreoEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <label for="txtClaveEditar">Clave:</label>
+            <asp:TextBox ID="txtClaveEditar" runat="server" TextMode="Password" CssClass="form-control" />
+        </div>
+        <div>
+            <label for="ddlRolEditar">Rol de Usuario:</label>
+            <asp:DropDownList ID="ddlRolEditar" runat="server" CssClass="form-control">
+                <asp:ListItem Text="Seleccionar Rol" Value="" />
+                <asp:ListItem Text="Estudiante" Value="ES" />
+                <asp:ListItem Text="Administrativo" Value="AD" />
+                
+            </asp:DropDownList>
+        </div>
+        <div>
+            <label for="txtEstadoEditar">Estado:</label>
+            <asp:TextBox ID="txtEstadoEditar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <asp:Button ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" CssClass="btn btn-primary" />
+        </div>
+    </div>
+     <hr />
+        <h3>Eliminar</h3>
+    <div>
+        <div>
+            <label for="txtIdEliminar">Codigo Usuario:</label>
+            <asp:TextBox ID="txtIdEliminar" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" CssClass="btn btn-primary" />
+        </div>
+        <div>
+             <asp:Label ID="txtEliminarInformacion" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
 </asp:Content>
 

@@ -12,9 +12,43 @@ public class SWADNETVENTAS : ISWADNETVENTAS
     #region Tabla: 1
 
     #endregion
+    #region Tabla: VDetalleVenta
+    public int Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta()
+    {
+        CVDetalleVenta cVDetalleVenta = new CVDetalleVenta();
+        return cVDetalleVenta.Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta();
+    }
+    public void Insertar_VDetalleVenta_I(EVDetalleVenta detalleVenta)
+    {
+        CVDetalleVenta cVDetalleVenta = new CVDetalleVenta();
+        cVDetalleVenta.Insertar_VDetalleVenta_I(detalleVenta);
+    }
+    public List<EVDetalleVenta> Obtener_VDetalleVenta_O_CodigoVenta(int codigoVenta)
+    {
+        CVDetalleVenta cVDetalleVenta = new CVDetalleVenta();
+        return cVDetalleVenta.Obtener_VDetalleVenta_O_CodigoVenta(codigoVenta);
+    }
+    #endregion
 
-    #region Tabla: 2
-
+    #region Tabla: VVenta
+    // Obtener último id
+    public int Obtener_VVenta_O_SiguienteCodigoVenta()
+    {
+        CVVenta cVVenta = new CVVenta();
+        return cVVenta.Obtener_VVenta_O_SiguienteCodigoVenta();
+    }
+    // Insertar
+    public void Insertar_VVenta_I(EVVenta venta)
+    {
+        CVVenta cVVenta = new CVVenta();
+        cVVenta.Insertar_VVenta_I(venta);
+    }
+    // Obtener un registro
+    public List<EVVenta> Obtener_VVenta_O(int codigoVenta)
+    {
+        CVVenta cVUsuario = new CVVenta();
+        return cVUsuario.Obtener_VVenta_O(codigoVenta);
+    }
     #endregion
 
     #region Tabla: VUsuario

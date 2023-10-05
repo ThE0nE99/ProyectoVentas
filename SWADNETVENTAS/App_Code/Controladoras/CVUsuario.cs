@@ -32,7 +32,6 @@ public class CVUsuario
             return 1;
         else
             return (int)res + 1;
-
     }
     // Insertar
     public void Insertar_VUsuario_I(EVUsuario usuario)

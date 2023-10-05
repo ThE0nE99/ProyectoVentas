@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:59438/SWADNETVENTAS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVentaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_VDetalleVenta_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="detalleVenta" nillable="true" type="q1:EVDetalleVenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_VDetalleVenta_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VDetalleVenta_O_CodigoVenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoVenta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VDetalleVenta_O_CodigoVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VDetalleVenta_O_CodigoVentaResult" nillable="true" type="q2:ArrayOfEVDetalleVenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VVenta_O_SiguienteCodigoVenta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VVenta_O_SiguienteCodigoVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_VVenta_O_SiguienteCodigoVentaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_VVenta_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="usuario" nillable="true" type="q3:EVVenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_VVenta_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VVenta_O">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VVenta_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VVenta_OResult" nillable="true" type="q4:ArrayOfEVVenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_VUsuario_O_SiguienteCodigoUsuario">
     <xs:complexType>
       <xs:sequence />
@@ -16,7 +92,7 @@
   <xs:element name="Insertar_VUsuario_I">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="usuario" nillable="true" type="q1:EVUsuario" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="usuario" nillable="true" type="q5:EVUsuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -35,14 +111,14 @@
   <xs:element name="Obtener_VUsuario_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VUsuario_OResult" nillable="true" type="q2:EVUsuario" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VUsuario_OResult" nillable="true" type="q6:EVUsuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Actualizar_VUsuario_A">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="usuario" nillable="true" type="q3:EVUsuario" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="usuario" nillable="true" type="q7:EVUsuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -59,7 +135,7 @@
   <xs:element name="Obtener_VUsuario_O_TodoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VUsuario_O_TodoResult" nillable="true" type="q4:ArrayOfEVUsuario" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VUsuario_O_TodoResult" nillable="true" type="q8:ArrayOfEVUsuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

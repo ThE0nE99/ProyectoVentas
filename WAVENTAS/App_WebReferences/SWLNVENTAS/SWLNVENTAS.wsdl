@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:59753/SWLNVENTAS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Venta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_Venta" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Venta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VentaResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O_SiguienteCodigoUsuario" />
   </wsdl:message>
@@ -44,6 +50,10 @@
     <wsdl:part name="parameters" element="tns:Eliminar_VUsuario_EResponse" />
   </wsdl:message>
   <wsdl:portType name="ISWLNVENTAS">
+    <wsdl:operation name="Insertar_Venta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_Venta" message="tns:ISWLNVENTAS_Insertar_Venta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VentaResponse" message="tns:ISWLNVENTAS_Insertar_Venta_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Obtener_VUsuario_O_SiguienteCodigoUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuario" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuarioResponse" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_OutputMessage" />
@@ -71,6 +81,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWLNVENTAS" type="tns:ISWLNVENTAS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insertar_Venta">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_Venta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Obtener_VUsuario_O_SiguienteCodigoUsuario">
       <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuario" style="document" />
       <wsdl:input>

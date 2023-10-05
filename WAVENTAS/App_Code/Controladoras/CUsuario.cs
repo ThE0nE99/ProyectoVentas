@@ -28,6 +28,7 @@ public class CUsuario
     #endregion
 
     #region Metodos Publicos
+    #region Tabla : VUsuario
     // Obtener último id
     public int Obtener_VUsuario_O_SiguienteCodigoUsuario()
     {
@@ -103,5 +104,6 @@ public class CUsuario
             throw;
         }
     }
+    #endregion
     #endregion
 }

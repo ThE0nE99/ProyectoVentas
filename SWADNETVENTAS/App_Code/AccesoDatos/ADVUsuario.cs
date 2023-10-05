@@ -44,7 +44,7 @@ public class ADVUsuario
             bdNETVENTAS.AddInParameter(comandoBD, "RolUsuario", DbType.String, usuario.RolUsuario);
             bdNETVENTAS.AddInParameter(comandoBD, "Estado", DbType.StringFixedLength, SDatosPA.Auditoria_Activo);
             bdNETVENTAS.AddInParameter(comandoBD, "FechaRegistro", DbType.DateTime, SDatosPA.Auditoria_FechaRegistro);
-            bdNETVENTAS.AddInParameter(comandoBD, "FechaModificacion", DbType.DateTime, SDatosPA.Auditoria_FechaModificacion);
+            bdNETVENTAS.AddInParameter(comandoBD, "FechaActualizacion", DbType.DateTime, SDatosPA.Auditoria_FechaModificacion);
             bdNETVENTAS.ExecuteNonQuery(comandoBD);
         }
         catch (Exception)
@@ -75,7 +75,7 @@ public class ADVUsuario
         try
         {
             Database bdNETVENTAS = SBaseDatos.BDNETVENTAS;
-            DbCommand comandoBD = bdNETVENTAS.GetStoredProcCommand("VUsuario_I");
+            DbCommand comandoBD = bdNETVENTAS.GetStoredProcCommand("VUsuario_A");
             bdNETVENTAS.AddInParameter(comandoBD, "CodigoUsuario", DbType.Int32, usuario.CodigoUsuario);
             bdNETVENTAS.AddInParameter(comandoBD, "NombresUsuario", DbType.String, usuario.NombresUsuario);
             bdNETVENTAS.AddInParameter(comandoBD, "ApellidosUsuario", DbType.String, usuario.ApellidosUsuario);
@@ -84,7 +84,7 @@ public class ADVUsuario
             bdNETVENTAS.AddInParameter(comandoBD, "ClaveUsuario", DbType.String, usuario.ClaveUsuario);
             bdNETVENTAS.AddInParameter(comandoBD, "RolUsuario", DbType.String, usuario.RolUsuario);
             bdNETVENTAS.AddInParameter(comandoBD, "Estado", DbType.StringFixedLength, usuario.Estado);
-            bdNETVENTAS.AddInParameter(comandoBD, "FechaModificacion", DbType.DateTime, SDatosPA.Auditoria_FechaModificacion);
+            bdNETVENTAS.AddInParameter(comandoBD, "FechaActualizacion", DbType.DateTime, SDatosPA.Auditoria_FechaModificacion);
             bdNETVENTAS.ExecuteNonQuery(comandoBD);
         }
         catch (Exception)

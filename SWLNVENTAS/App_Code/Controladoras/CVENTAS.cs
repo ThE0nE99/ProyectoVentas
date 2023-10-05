@@ -24,8 +24,67 @@ public class CVENTAS
 
     #endregion
 
-    #region Tabla: 2
+    #region Tabla: VDetalleV
+    public int Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta()
+    {
+        try
+        {
+            return asNETVENTAS.Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+   
+    public List<EVDetalleVenta> Obtener_VDetalleVenta_O_CodigoVenta(int codigoVenta)
+    {
+        try
+        {
+            return asNETVENTAS.Obtener_VDetalleVenta_O_CodigoVenta(codigoVenta).ToList();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
+    #endregion
+
+    #region Registo de la Venta
+    // Insertar
+    public void Insertar_Venta(EVenta eVenta, List<EDetalleVenta> lstDetalleVenta)
+    {
+        EVVenta eVVenta = new EVVenta();
+        try
+        {
+            eVVenta.CodigoVenta = asNETVENTAS.Obtener_VVenta_O_SiguienteCodigoVenta();
+            eVVenta.CodigoCliente = eVenta.CodigoCliente;
+            eVVenta.CodigoUsuario = eVenta.CodigoUsuario;
+            eVVenta.FechaHoraVenta = eVenta.FechaHoraVenta;
+            eVVenta.ImpuestoVenta = eVenta.ImpuestoVenta;
+            eVVenta.TotalVenta = eVenta.TotalVenta;
+            asNETVENTAS.Insertar_VVenta_I(eVVenta);
+            EVDetalleVenta eVDetalleVenta = null;
+            foreach (EDetalleVenta item in lstDetalleVenta)
+            {
+                eVDetalleVenta = new EVDetalleVenta();
+                eVDetalleVenta.CodigoDetalleVenta = asNETVENTAS.Obtener_VDetalleVenta_O_SiguienteCodigoDetalleVenta();
+                eVDetalleVenta.CodigoVenta = eVVenta.CodigoVenta;
+                eVDetalleVenta.CodigoArticulo = item.CodigoArticulo;
+                eVDetalleVenta.CantidadDetalleVenta = item.CantidadDetalleVenta;
+                eVDetalleVenta.PrecioDetalleVenta = item.PrecioDetalleVenta;
+                eVDetalleVenta.DescuentoDetalleVenta = item.DescuentoDetalleVenta;
+                asNETVENTAS.Insertar_VDetalleVenta_I(eVDetalleVenta);
+            }
+            
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+       
+    }
     #endregion
 
     #region Tabla: VUsuario

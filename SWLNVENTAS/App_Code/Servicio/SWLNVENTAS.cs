@@ -17,6 +17,14 @@ public class SWLNVENTAS : ISWLNVENTAS
     #region Tabla: 2
 
     #endregion
+    #region Registo de la Venta
+    // Insertar
+    public void Insertar_Venta(EVenta eVenta, List<EDetalleVenta> lstDetalleVentas)
+    {
+        CVENTAS cVENTAS = new CVENTAS();
+        cVENTAS.Insertar_Venta(eVenta, lstDetalleVentas);
+    }
+    #endregion
 
     #region Tabla: VUsuario
     // Obtener último id
