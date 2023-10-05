@@ -109,7 +109,23 @@ public class CVENTAS
     #endregion
 
 
-    #region Tabla: 2
+    #region Registro Ingreso
+   
+    public void Insertar_Ingreso(EVIngreso ingreso, List<EVDetalleIngreso> detalleIngresos)
+    {
+        try
+        {
+            int codigoIngreso = asNETVENTAS.Obtener_VIngreso_O_SiguienteCodigoIngreso();
+            asNETVENTAS.Insertar_VIngreso_I(ingreso);
+           
+            foreach (var item in detalleIngresos)
+                asNETVENTAS.Insertar_VDetalleIngreso_I(item);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
     #endregion
 

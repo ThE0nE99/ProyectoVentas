@@ -45,7 +45,8 @@ public class SWLNVENTAS : ISWLNVENTAS
 
     #endregion
 
-    #region Tabla: 2
+    #region Registro Ingreso
+        
 
     #endregion
 

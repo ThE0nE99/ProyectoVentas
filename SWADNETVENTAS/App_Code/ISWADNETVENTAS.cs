@@ -27,8 +27,25 @@ public interface ISWADNETVENTAS
     #endregion
 
 
-    #region Tabla: 2
+    #region Tabla: VDetalleIngreso
 
+    [OperationContract]
+    int Obtener_VDetalleIngreso_O_SiguienteCodigoDetalleIngreso();
+    [OperationContract]
+    void Insertar_VDetalleIngreso_I(EVDetalleIngreso detalle);
+    [OperationContract]
+    EVDetalleIngreso Obtener_VDetalleIngreso_O(int codigoDetalleIngreso);
+
+    #endregion
+    #region Tabla: VIngreso
+    [OperationContract]
+    int Obtener_VIngreso_O_SiguienteCodigoIngreso();
+    [OperationContract]
+    void Insertar_VIngreso_I(EVIngreso ingreso);
+    [OperationContract]
+    EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso);
+    [OperationContract]
+    List<EVIngreso> Obtener_VIngreso_O_Todo();
     #endregion
 
     #region Tabla: 3
