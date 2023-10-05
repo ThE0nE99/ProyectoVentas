@@ -130,6 +130,7 @@ public class CVENTAS
             eVDetalleVenta.PrecioDetalleVenta = precioDetalleVenta;
             eVDetalleVenta.DescuentoDetalleVenta = descuentoDetalleVenta;
             asNETVENTAS.Insertar_VDetalleVenta_I(eVDetalleVenta);
+
         }
         catch (Exception)
         {
