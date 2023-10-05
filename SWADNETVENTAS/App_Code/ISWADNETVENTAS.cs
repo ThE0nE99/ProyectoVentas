@@ -25,8 +25,17 @@ public interface ISWADNETVENTAS
     void Eliminar_VProveedor_E(int codigoProveedor);
     #endregion
 
-    #region Tabla: 2
+    #region Tabla: VIngreso
+    [OperationContract]
+    int Obtener_VIngreso_O_SiguienteCodigoIngreso();
+    [OperationContract]
+    void Insertar_VIngreso_I(EVIngreso ingreso);
+    [OperationContract]
+    EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso);
+    [OperationContract]
+    List<EVIngreso> Obtener_VIngreso_O_Todo();
 
+   
     #endregion
 
     #region Tabla: 3

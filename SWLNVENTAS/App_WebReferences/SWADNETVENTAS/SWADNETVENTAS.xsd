@@ -20,4 +20,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfEVProveedor" nillable="true" type="tns:ArrayOfEVProveedor" />
+  <xs:complexType name="EVIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImpuestoIngreso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalIngreso" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVIngreso" nillable="true" type="tns:EVIngreso" />
+  <xs:complexType name="ArrayOfEVIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVIngreso" nillable="true" type="tns:EVIngreso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVIngreso" nillable="true" type="tns:ArrayOfEVIngreso" />
 </xs:schema>

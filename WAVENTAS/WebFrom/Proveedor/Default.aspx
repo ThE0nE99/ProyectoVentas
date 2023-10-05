@@ -8,48 +8,68 @@
 
 <div>
 <label for="txtTipoProveedor ">TipoProveedor :</label>
-<asp:TextBox ID="txtTipoProveedor" runat="server" CssClass="form-control" />
+<asp:TextBox ID="txbTipoProveedor" runat="server" CssClass="form-control" />
 </div>
 <div>
 <label for="txtRazonSocialProveedor">RazonSocialProveedor:</label>
-<asp:TextBox ID="txtRazonSocialProveedor" runat="server" CssClass="form-control" />
+<asp:TextBox ID="txbRazonSocialProveedor" runat="server" CssClass="form-control" />
 </div>
 <div>
 <label for="txtDireccionProveedor">DireccionProveedor:</label>
-<asp:TextBox ID="txtDireccionProveedor" runat="server" CssClass="form-control" />
+<asp:TextBox ID="txbDireccionProveedor" runat="server" CssClass="form-control" />
 </div>
 <div>
 <label for="txtCelularProveedor">CelularProveedor:</label>
-<asp:TextBox ID="txtCelularProveedor" runat="server" CssClass="form-control" />
+<asp:TextBox ID="txbCelularProveedor" runat="server" CssClass="form-control" />
 </div>
 <div>
 <label for="CorreoProveedor">CorreoProveedor:</label>
-<asp:TextBox ID="txtCorreoProveedor" runat="server"  CssClass="form-control" />
+<asp:TextBox ID="txbCorreoProveedor" runat="server"  CssClass="form-control" />
 </div>
 
 <div>
 <asp:Button ID="btnAgregarProveedor" runat="server" Text="AgregarProveedor" OnClick="btnAgregarProveedor_Click" CssClass="btn btn-primary" />
 </div>
-<asp:Label ID="lblCodigo" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblApellido" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblContacto" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblClave" runat="server" Text=""></asp:Label>
-<asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+        <div>
+            <h1>Ver Proveedor</h1>
+            <asp:Label runat="server" Text="Buscar Articulo: Codigo  "></asp:Label>
+            <asp:TextBox ID="txbCodigoProveedor" runat="server"></asp:TextBox>
+            <asp:Button ID="btnBuscarProveedor" Text="Buscar" runat="server" OnClick="btnBuscarProveedor_Click" />
+            <asp:Label runat="server" ID="lbObtenerProveedor"></asp:Label>
+        </div>
 
- 
 
-    <asp:GridView ID="GridViewUsuarios" runat="server" AutoGenerateColumns="False">
-<Columns>
-<asp:BoundField DataField="NombresUsuario" HeaderText="Nombres" />
-<asp:BoundField DataField="ApellidosUsuario" HeaderText="Apellidos" />
-<asp:BoundField DataField="CelularUsuario" HeaderText="Celular" />
-<asp:BoundField DataField="CorreoUsuario" HeaderText="Correo" />
-<asp:BoundField DataField="ClaveUsuario" HeaderText="Clave" />
-<asp:BoundField DataField="Estado" HeaderText="Estado" />
-</Columns>
-</asp:GridView>
+        <div>
+            <h1>Actualizar Proveedor</h1>
+            <asp:Label runat="server" Text="Actualizar Proveedor: Codigo Proveedor"></asp:Label>
+            <asp:TextBox ID="txbCodigoProveedorActualizar" runat="server"></asp:TextBox>
+            <asp:Button ID="btnBuscarProveedorActualizar" Text="Buscar" runat="server" OnClick="btnBuscarProveedorActualizar_Click" />
+
+            <asp:Label runat="server" Text="Tipo Proveedor: "></asp:Label>
+            <asp:TextBox ID="txbTipoProveedorActualizar" runat="server"></asp:TextBox>
+
+            <asp:Label runat="server" Text="Razon Social Proveedor: "></asp:Label>
+            <asp:TextBox ID="txbRazonSocialProveedorActualizar" runat="server"></asp:TextBox>
+
+            <asp:Label runat="server" Text="Direccion Proveedor: "></asp:Label>
+            <asp:TextBox ID="txbDireccionProveedorActualizar" runat="server"></asp:TextBox>
+
+            <asp:Label runat="server" Text="Celular Proveedor: "></asp:Label>
+            <asp:TextBox ID="txbCelularProveedorActualizar" runat="server"></asp:TextBox>
+
+            <asp:Label runat="server" Text="Correo Proveedor: "></asp:Label>
+            <asp:TextBox ID="txbCorreoProveedorActualizar" runat="server"></asp:TextBox>
+
+            <asp:Button ID="btnActualizarProveedor" Text="Actualizar Proveedor" runat="server" OnClick="btnActualizarProveedor_Click" />
+            <asp:Label runat="server" ID="lbActualizar"></asp:Label>
+        </div>
+        <div>
+            <h1>Eliminar Articulo</h1>
+            <asp:Label runat="server" Text="Eliminar Proveedor: Codigo Proveedor "></asp:Label>
+            <asp:TextBox ID="txbCodigoProveedorEliminar" runat="server"></asp:TextBox>
+            <asp:Button ID="btnBuscarProveedorEliminar" Text="Buscar" runat="server" OnClick="btnBuscarProveedorEliminar_Click"/>
+            <asp:Label runat="server" ID="lbEliminar"></asp:Label>
+        </div>
 
 </asp:Content>
 

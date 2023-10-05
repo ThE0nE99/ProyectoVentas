@@ -100,8 +100,61 @@ public class ASNETVENTAS
     }
     #endregion
 
-    #region Tabla: 2
+    #region Tabla: VIngreso
+    public int Obtener_VIngreso_O_SiguienteCodigoIngreso()
+    {
+        int res = 0;
+        try
+        {
+            res = swadNETVENTAS.Obtener_VIngreso_O_SiguienteCodigoIngreso();
+            return res;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void Insertar_VIngreso_I(EVIngreso ingreso)
+    {
 
+        try
+        {
+            swadNETVENTAS.Insertar_VIngreso_I(ingreso);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+    }
+    public EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso)
+    {
+        EVIngreso eVIngreso = new EVIngreso();
+        try
+        {
+            eVIngreso = swadNETVENTAS.Obtener_VIngreso_O_CodigoIngreso(codigoIngreso);
+            return eVIngreso;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EVIngreso> Obtener_VIngreso_O_Todo()
+    {
+
+        List<EVIngreso> lstVIngreso = new List<EVIngreso>();
+        try
+        {
+            lstVIngreso = swadNETVENTAS.Obtener_VIngreso_O_Todo().ToList();
+            return lstVIngreso;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+    }
     #endregion
 
     #region Tabla: 3

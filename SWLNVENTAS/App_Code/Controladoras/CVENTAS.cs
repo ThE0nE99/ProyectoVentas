@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 /// <summary>
 /// Descripción breve de CVENTAS
 /// </summary>
@@ -116,6 +117,25 @@ public class CVENTAS
     #endregion
 
     #region Tabla: 4
+
+    #endregion
+
+    #region  Resgistro Almacen 
+    public void Insertar_Ingreso(EVIngreso ingreso)
+    {
+        try
+        {
+            int codigoIngreso = asNETVENTAS.Obtener_VIngreso_O_SiguienteCodigoIngreso();
+            asNETVENTAS.Insertar_VIngreso_I(ingreso);
+            //insertar_VVenta_I(venta);
+            //foreach (var item in detalleVenta)
+            //    insertar_VDetalleVenta_I(item);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
     #endregion
 }
