@@ -8,43 +8,65 @@ using System.Web.UI.WebControls;
 
 public partial class WebFrom_Venta_APVenta : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
-
+       btnNuevoRegistro.Visible = false;
     }
-    protected void btnGuardar_Click(object sender, EventArgs e)
+    protected void btnInsertarVenta_Click(object sender, EventArgs e)
     {
-        CVenta cVenta = new CVenta();
-        EVenta eVenta = new EVenta();
-        eVenta.CodigoCliente = 12;
-        eVenta.CodigoUsuario = 13;
-        eVenta.FechaHoraVenta = DateTime.Now;
-        eVenta.ImpuestoVenta = 12;
-        eVenta.TotalVenta = 13;
-        eVenta.EstadoVenta = "A";
+        try
+        {
+            CVenta cVenta = new CVenta();
+            EVenta eVenta = new EVenta();
+            eVenta.CodigoCliente = int.Parse(txtCodigoClienteVenta.Text);
+            eVenta.CodigoUsuario = int.Parse(txtCodigoUsuarioVenta.Text);
+            eVenta.FechaHoraVenta = DateTime.Now;
+            eVenta.ImpuestoVenta = double.Parse(txtImpuestoVenta.Text);
+            eVenta.TotalVenta = double.Parse(txtTotalVenta.Text);
+            eVenta.EstadoVenta = txtEstadoVenta.Text;
 
-        List<EDetalleVenta> lista = new List<EDetalleVenta>();
+            List<EDetalleVenta> lista = new List<EDetalleVenta>();
 
-        EDetalleVenta eDetalle = new EDetalleVenta();
+            EDetalleVenta eDetalle = new EDetalleVenta();
 
-        //eDetalle.CodigoVenta = 14;
-        eDetalle.CodigoArticulo = 13;
-        eDetalle.CantidadDetalleVenta = 12;
-        eDetalle.PrecioDetalleVenta = 12;
-        eDetalle.DescuentoDetalleVenta = 1;
+            eDetalle.CodigoArticulo = int.Parse(txtCantidadArticulo.Text);
+            eDetalle.CantidadDetalleVenta = int.Parse(txtCantidadDetalleVenta.Text);
+            eDetalle.PrecioDetalleVenta = double.Parse(txtPrecioDetalleVenta.Text);
+            eDetalle.DescuentoDetalleVenta = double.Parse(txtDescuentoDetalleVenta.Text);
 
-        lista.Add(eDetalle);
+            lista.Add(eDetalle);
 
-        EDetalleVenta eDetalle2 = new EDetalleVenta();
-        
-        //eDetalle2.CodigoVenta = 14;
-        eDetalle2.CodigoArticulo = 10;
-        eDetalle2.CantidadDetalleVenta = 11;
-        eDetalle2.PrecioDetalleVenta = 12;
-        eDetalle2.DescuentoDetalleVenta = 11;
+            cVenta.Insertar_Venta(eVenta, lista);
+            lblInformacion.Text = "Registro Insertado Correctamente";
+            btnInsertarVenta.Visible = false;
+            btnNuevoRegistro.Visible = true;
+            OcultarCamposEdicion();
+        }
+        catch (Exception)
+        {
+            lblInformacion.Text = "Error al insertar el registro: ";
+        }
+       
 
-        lista.Add(eDetalle2);
-
-        cVenta.Insertar_Venta(eVenta, lista);
     }
+    private void OcultarCamposEdicion()
+    {
+        txtCodigoClienteVenta.Text = "";
+        txtCodigoUsuarioVenta.Text = "";
+        txtImpuestoVenta.Text = "";
+        txtTotalVenta.Text = "";
+        txtEstadoVenta.Text = "";
+
+        txtCantidadArticulo.Text = "";
+        txtCantidadDetalleVenta.Text = "";
+        txtPrecioDetalleVenta.Text = "";
+        txtDescuentoDetalleVenta.Text = "";
+    }
+    protected void btnNuevoRegistro_Click(object sender, EventArgs e)
+    {
+        btnInsertarVenta.Visible = true;
+        lblInformacion.Text = "";
+    }
+
 }

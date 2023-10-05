@@ -64,6 +64,7 @@ public class CVENTAS
             eVVenta.FechaHoraVenta = eVenta.FechaHoraVenta;
             eVVenta.ImpuestoVenta = eVenta.ImpuestoVenta;
             eVVenta.TotalVenta = eVenta.TotalVenta;
+            eVVenta.EstadoVenta = eVenta.EstadoVenta;
             asNETVENTAS.Insertar_VVenta_I(eVVenta);
             EVDetalleVenta eVDetalleVenta = null;
             foreach (EDetalleVenta item in lstDetalleVenta)
