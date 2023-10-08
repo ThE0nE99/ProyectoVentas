@@ -20,7 +20,7 @@ public interface ISWLNVENTAS
     [OperationContract]
     EVProveedor Obtener_VProveedor_O(int codigoProveedor);
     [OperationContract]
-    void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor);
+    void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor,string estado);
     [OperationContract]
     List<EVProveedor> Obtener_VProveedor_O_Todo();
     [OperationContract]

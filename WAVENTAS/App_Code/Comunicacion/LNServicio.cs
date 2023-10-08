@@ -75,13 +75,13 @@ public class LNServicio
         return eVProveedor;
     }
     // Actualizar
-    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor)
+    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor, string estado)
     {
         try
         {
             using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
             {
-                swlnVENTAS.Actualizar_VProveedor_A(codigoProveedor, tipoProveedor, razonSocialProveedor, direccionProveedor, celularProveedor, correoProveedor);
+                swlnVENTAS.Actualizar_VProveedor_A(codigoProveedor, tipoProveedor, razonSocialProveedor, direccionProveedor, celularProveedor, correoProveedor ,estado);
             }
         }
         catch (Exception)

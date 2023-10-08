@@ -5,7 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
         <h2>Formulario de Registro de Usuario</h2>
-
 <div>
 <label for="txtTipoProveedor ">TipoProveedor :</label>
 <asp:TextBox ID="txbTipoProveedor" runat="server" CssClass="form-control" />
@@ -71,5 +70,10 @@
             <asp:Label runat="server" ID="lbEliminar"></asp:Label>
         </div>
 
+        <div>
+            <h1>Ver todos los Proveedores</h1>
+            <asp:Button ID="btnVerProveedores" Text="Buscar" runat="server" OnClick="btnVerProveedores_Click" />
+            <asp:Label runat="server" ID="lbObtenerTodos"></asp:Label>
+        </div>
 </asp:Content>
 

@@ -1,6 +1,7 @@
 ﻿using SWADNETVENTAS;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -24,7 +25,6 @@ public class CVENTAS
     #region Tabla: VProveedor
     public int Obtener_VProveedor_O_SiguienteCodigoProveedor()
     {
-
         try
         {
             return asNETVENTAS.Obtener_VProveedor_O_SiguienteCodigoProveedor();
@@ -65,7 +65,7 @@ public class CVENTAS
             throw;
         }
     }
-    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor)
+    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor,string estado)
     {
         EVProveedor eVProveedor = new EVProveedor();
         try
@@ -76,6 +76,7 @@ public class CVENTAS
             eVProveedor.DireccionProveedor = direccionProveedor;
             eVProveedor.CelularProveedor = celularProveedor;
             eVProveedor.CorreoProveedor = correoProveedor;
+            eVProveedor.Estado = estado;
             asNETVENTAS.Actualizar_VProveedor_A(eVProveedor);
         }
         catch (Exception)

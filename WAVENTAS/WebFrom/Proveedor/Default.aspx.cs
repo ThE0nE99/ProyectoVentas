@@ -23,12 +23,12 @@ public partial class WebFrom_Proveedor_Default : System.Web.UI.Page
     }
     protected void btnBuscarProveedor_Click(object sender, EventArgs e)
     {
-        if (int.Parse(txbCodigoProveedorActualizar.Text) > 0)
+        if (int.Parse(txbCodigoProveedor.Text) > 0)
         {
-            EVProveedor eVproveedor = cProveedor.Obtener_VProveedor_O(int.Parse(txbCodigoProveedorActualizar.Text));
+            EVProveedor eVproveedor = cProveedor.Obtener_VProveedor_O(int.Parse(txbCodigoProveedor.Text));
             if (eVproveedor != null)
             {
-                EVProveedor eVProveedor = cProveedor.Obtener_VProveedor_O(int.Parse(txbCodigoProveedorActualizar.Text));
+                EVProveedor eVProveedor = cProveedor.Obtener_VProveedor_O(int.Parse(txbCodigoProveedor.Text));
                 lbObtenerProveedor.Text = "  TipoProveedor: " + eVProveedor.TipoProveedor + "  RazonSocial Proveedor: " + eVProveedor.RazonSocialProveedor + "  DireccionProveedor: " + eVProveedor.DireccionProveedor + "  CelularProveedor: " + eVProveedor.CelularProveedor + "CorreoProveedor: " + eVProveedor.CorreoProveedor ;
             }
         }
@@ -50,12 +50,10 @@ public partial class WebFrom_Proveedor_Default : System.Web.UI.Page
             }
         }
     }
-
     protected void btnActualizarProveedor_Click(object sender, EventArgs e)
     {
-        cProveedor.Actualizar_VProveedor_A(int.Parse(txbCodigoProveedorActualizar.Text), txbTipoProveedorActualizar.Text, txbRazonSocialProveedorActualizar.Text, txbDireccionProveedorActualizar.Text, txbCelularProveedorActualizar.Text, txbCorreoProveedorActualizar.Text);
+        cProveedor.Actualizar_VProveedor_A(int.Parse(txbCodigoProveedorActualizar.Text), txbTipoProveedorActualizar.Text, txbRazonSocialProveedorActualizar.Text, txbDireccionProveedorActualizar.Text, txbCelularProveedorActualizar.Text, txbCorreoProveedorActualizar.Text,"AC");
     }
-
     protected void btnBuscarProveedorEliminar_Click(object sender, EventArgs e)
     {
         if (int.Parse(txbCodigoProveedorEliminar.Text) > 0)
@@ -65,6 +63,16 @@ public partial class WebFrom_Proveedor_Default : System.Web.UI.Page
             {
                 cProveedor.Eliminar_VProveedor_E(int.Parse(txbCodigoProveedorEliminar.Text));
             }
+        }
+    }
+
+    protected void btnVerProveedores_Click(object sender, EventArgs e)
+    {
+        lbObtenerTodos.Text = "";
+        List<EVProveedor> lstEVArticulos = cProveedor.Obtener_VProveedor_O_Todo();
+        foreach (var proveedor in lstEVArticulos)
+        {
+            lbObtenerTodos.Text += "  TipoProveedor: " + proveedor.TipoProveedor + "  RazonSocial Proveedor: " + proveedor.RazonSocialProveedor + "  DireccionProveedor: " + proveedor.DireccionProveedor + "  CelularProveedor: " + proveedor.CelularProveedor + "CorreoProveedor: " + proveedor.CorreoProveedor + "\n";
         }
     }
 }

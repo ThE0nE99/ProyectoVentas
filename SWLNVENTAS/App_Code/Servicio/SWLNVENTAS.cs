@@ -28,10 +28,10 @@ public class SWLNVENTAS : ISWLNVENTAS
         return cVENTAS.Obtener_VProveedor_O(codigoProveedor);
     }
 
-    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor)
+    public void Actualizar_VProveedor_A(int codigoProveedor, string tipoProveedor, string razonSocialProveedor, string direccionProveedor, string celularProveedor, string correoProveedor, string estado)
     {
         CVENTAS cVENTAS = new CVENTAS();
-        cVENTAS.Actualizar_VProveedor_A(codigoProveedor, tipoProveedor, razonSocialProveedor, direccionProveedor, celularProveedor, correoProveedor);
+        cVENTAS.Actualizar_VProveedor_A(codigoProveedor, tipoProveedor, razonSocialProveedor, direccionProveedor, celularProveedor, correoProveedor,estado);
 
     }
     public List<EVProveedor> Obtener_VProveedor_O_Todo()

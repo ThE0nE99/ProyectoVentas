@@ -7,6 +7,7 @@ using System.Web;
 /// <summary>
 /// Descripción breve de EVIngreso
 /// </summary>
+[DataContract]
 public class EVIngreso
 {
     #region Propiedades
