@@ -26,7 +26,7 @@
       <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
       <xs:element minOccurs="0" name="CodigoDetalleIngreso" type="xs:int" />
       <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
-      <xs:element minOccurs="0" name="PrecioIngreso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PrecioIngreso" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EVDetalleIngreso" nillable="true" type="tns:EVDetalleIngreso" />

@@ -43,6 +43,12 @@
   <wsdl:message name="ISWLNVENTAS_Eliminar_VCliente_E_OutputMessage">
     <wsdl:part name="parameters" element="tns:Eliminar_VCliente_EResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Ingreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Ingreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_IngresoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISWLNVENTAS">
     <wsdl:operation name="Obtener_VCliente_O_SiguienteCodigoCliente">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O_SiguienteCodigoCliente" message="tns:ISWLNVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_InputMessage" />
@@ -67,6 +73,10 @@
     <wsdl:operation name="Eliminar_VCliente_E">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_E" message="tns:ISWLNVENTAS_Eliminar_VCliente_E_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_EResponse" message="tns:ISWLNVENTAS_Eliminar_VCliente_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Ingreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_Ingreso" message="tns:ISWLNVENTAS_Insertar_Ingreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_IngresoResponse" message="tns:ISWLNVENTAS_Insertar_Ingreso_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWLNVENTAS" type="tns:ISWLNVENTAS">
@@ -118,6 +128,15 @@
     </wsdl:operation>
     <wsdl:operation name="Eliminar_VCliente_E">
       <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_Ingreso" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

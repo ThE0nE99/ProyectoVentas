@@ -55,11 +55,11 @@
   <wsdl:message name="ISWADNETVENTAS_Insertar_VDetalleIngreso_I_OutputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_VDetalleIngreso_IResponse" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_Obtener_VDetalleIngreso_O_InputMessage">
-    <wsdl:part name="parameters" element="tns:Obtener_VDetalleIngreso_O" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VDetalleIngreso_O_CodigoIngreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VDetalleIngreso_O_CodigoIngreso" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_Obtener_VDetalleIngreso_O_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Obtener_VDetalleIngreso_OResponse" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VDetalleIngreso_O_CodigoIngreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VDetalleIngreso_O_CodigoIngresoResponse" />
   </wsdl:message>
   <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_SiguienteCodigoIngreso_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_VIngreso_O_SiguienteCodigoIngreso" />
@@ -73,11 +73,11 @@
   <wsdl:message name="ISWADNETVENTAS_Insertar_VIngreso_I_OutputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_VIngreso_IResponse" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_CodigoIngreso_InputMessage">
-    <wsdl:part name="parameters" element="tns:Obtener_VIngreso_O_CodigoIngreso" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VIngreso_O" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_CodigoIngreso_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Obtener_VIngreso_O_CodigoIngresoResponse" />
+  <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VIngreso_OResponse" />
   </wsdl:message>
   <wsdl:message name="ISWADNETVENTAS_Obtener_VIngreso_O_Todo_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_VIngreso_O_Todo" />
@@ -118,9 +118,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VDetalleIngreso_I" message="tns:ISWADNETVENTAS_Insertar_VDetalleIngreso_I_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VDetalleIngreso_IResponse" message="tns:ISWADNETVENTAS_Insertar_VDetalleIngreso_I_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Obtener_VDetalleIngreso_O">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_O" message="tns:ISWADNETVENTAS_Obtener_VDetalleIngreso_O_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_OResponse" message="tns:ISWADNETVENTAS_Obtener_VDetalleIngreso_O_OutputMessage" />
+    <wsdl:operation name="Obtener_VDetalleIngreso_O_CodigoIngreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_O_CodigoIngreso" message="tns:ISWADNETVENTAS_Obtener_VDetalleIngreso_O_CodigoIngreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_O_CodigoIngresoResponse" message="tns:ISWADNETVENTAS_Obtener_VDetalleIngreso_O_CodigoIngreso_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_VIngreso_O_SiguienteCodigoIngreso">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O_SiguienteCodigoIngreso" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_SiguienteCodigoIngreso_InputMessage" />
@@ -130,9 +130,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VIngreso_I" message="tns:ISWADNETVENTAS_Insertar_VIngreso_I_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Insertar_VIngreso_IResponse" message="tns:ISWADNETVENTAS_Insertar_VIngreso_I_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Obtener_VIngreso_O_CodigoIngreso">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O_CodigoIngreso" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_CodigoIngreso_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O_CodigoIngresoResponse" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_CodigoIngreso_OutputMessage" />
+    <wsdl:operation name="Obtener_VIngreso_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_OResponse" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_VIngreso_O_Todo">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O_Todo" message="tns:ISWADNETVENTAS_Obtener_VIngreso_O_Todo_InputMessage" />
@@ -213,8 +213,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Obtener_VDetalleIngreso_O">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_O" style="document" />
+    <wsdl:operation name="Obtener_VDetalleIngreso_O_CodigoIngreso">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VDetalleIngreso_O_CodigoIngreso" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -240,8 +240,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Obtener_VIngreso_O_CodigoIngreso">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O_CodigoIngreso" style="document" />
+    <wsdl:operation name="Obtener_VIngreso_O">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVENTAS/Obtener_VIngreso_O" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

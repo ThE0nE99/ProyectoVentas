@@ -19,7 +19,7 @@ public class EDetalleIngreso
     [DataMember]
     public int CantidadIngreso { get; set; }
     [DataMember]
-    public decimal PrecioIngreso { get; set; }
+    public double PrecioIngreso { get; set; }
     #endregion
 
     #region Constructores
@@ -29,7 +29,7 @@ public class EDetalleIngreso
         CodigoIngreso = int.MinValue;
         CodigoArticulo = int.MinValue;
         CantidadIngreso = int.MinValue;
-        PrecioIngreso = decimal.MinValue;
+        PrecioIngreso = double.MinValue;
     }
     #endregion
 }

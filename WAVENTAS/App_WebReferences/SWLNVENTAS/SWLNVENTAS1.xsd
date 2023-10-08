@@ -20,4 +20,32 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfEVCliente" nillable="true" type="tns:ArrayOfEVCliente" />
+  <xs:complexType name="EIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImpuestoIngreso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalIngreso" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EIngreso" nillable="true" type="tns:EIngreso" />
+  <xs:complexType name="ArrayOfEDetalleIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDetalleIngreso" nillable="true" type="tns:EDetalleIngreso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDetalleIngreso" nillable="true" type="tns:ArrayOfEDetalleIngreso" />
+  <xs:complexType name="EDetalleIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoDetalleIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="PrecioIngreso" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDetalleIngreso" nillable="true" type="tns:EDetalleIngreso" />
 </xs:schema>

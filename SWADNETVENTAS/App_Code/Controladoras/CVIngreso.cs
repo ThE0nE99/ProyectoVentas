@@ -33,10 +33,10 @@ public class CVIngreso
     {
         adVIngreso.Insertar_VIngreso_I(eVIngreso);
     }
-    public EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso)
+    public EVIngreso Obtener_VIngreso_O(int codigoIngreso)
     {
         EVIngreso eVIngreso = null;
-        DTOVIngreso dtoVIngreso = adVIngreso.Obtener_VIngreso_O_CodigoIngreso(codigoIngreso);
+        DTOVIngreso dtoVIngreso = adVIngreso.Obtener_VIngreso_O(codigoIngreso);
         foreach (DTOVIngreso.VIngresoRow drVIngreso in dtoVIngreso.VIngreso.Rows)
         {
             eVIngreso = new EVIngreso();

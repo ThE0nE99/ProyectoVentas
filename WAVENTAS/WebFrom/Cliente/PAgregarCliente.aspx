@@ -47,28 +47,30 @@
 
     <div>
         <h1>Actualizar Cliente</h1>
-        <asp:Label runat="server" Text="Actualizar Cliente: Codigo Cliente"></asp:Label>
-        <asp:TextBox ID="txbCodigoClienteActualizar" runat="server"></asp:TextBox>
-
-        <asp:Button ID="btnBuscarClienteActualizar" Text="Buscar" runat="server" OnClick="btnBuscarClienteActualizar_Click" />
-        <asp:Label runat="server" Text="Razon Social Cliente: "></asp:Label>
-        <asp:TextBox ID="txbRazonSocialClienteActualizar" runat="server"></asp:TextBox>
-
-        <asp:Label runat="server" Text="CI o NIT: "></asp:Label>
-        <asp:TextBox ID="txbCiONitClienteActualizar" runat="server"></asp:TextBox>
-
-        <asp:Label runat="server" Text="Tipo Cliente: "></asp:Label>
-        <asp:TextBox ID="txbTipoClienteActualizar" runat="server"></asp:TextBox>
-
-        <asp:Label runat="server" Text="Direccion Cliente: "></asp:Label>
-        <asp:TextBox ID="txbDireccActualizar" runat="server"></asp:TextBox>
-
-        <asp:Label runat="server" Text="Celular Cliente: "></asp:Label>
-        <asp:TextBox ID="txbCelularClienteActualizar" runat="server"></asp:TextBox>
-
-        <asp:Label runat="server" Text="Estado Cliente: "></asp:Label>
-        <asp:TextBox ID="txbEstadoActualizar" runat="server"></asp:TextBox>
-
+       <div>
+            <asp:Label runat="server" Text="Razon Social Cliente: "></asp:Label>
+            <asp:TextBox ID="txbRazonSocialClienteActualizar" runat="server"></asp:TextBox>
+       </div>
+        <div>
+            <asp:Label runat="server" Text="CI o NIT: "></asp:Label>
+            <asp:TextBox ID="txbCiONitClienteActualizar" runat="server"></asp:TextBox>
+         <div>
+        <div>   
+            <asp:Label runat="server" Text="Tipo Cliente: "></asp:Label>
+            <asp:TextBox ID="txbTipoClienteActualizar" runat="server"></asp:TextBox>
+       </div>
+         <div>
+            <asp:Label runat="server" Text="Direccion Cliente: "></asp:Label>
+            <asp:TextBox ID="txbDireccActualizar" runat="server"></asp:TextBox>
+       </div>
+        <div>
+            <asp:Label runat="server" Text="Celular Cliente: "></asp:Label>
+            <asp:TextBox ID="txbCelularClienteActualizar" runat="server"></asp:TextBox>
+       </div>
+         <div>
+              <asp:Label runat="server" Text="Estado Cliente: "></asp:Label>
+            <asp:TextBox ID="txbEstadoActualizar" runat="server"></asp:TextBox>
+       </div>
         <asp:Button ID="btnActualizarCliente" Text="Actualizar Cliente" runat="server" OnClick="btnActualizarCliente_Click" />
         <asp:Label runat="server" ID="lbActualizar"></asp:Label>
     </div>

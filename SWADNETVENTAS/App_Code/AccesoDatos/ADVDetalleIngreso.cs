@@ -37,7 +37,7 @@ public class ADVDetalleIngreso
             bdNETVENTAS.AddInParameter(comandoBD, "CodigoIngreso", DbType.Int32, detalle.CodigoDetalleIngreso);
             bdNETVENTAS.AddInParameter(comandoBD, "CodigoArticulo", DbType.Int32, detalle.CodigoArticulo);
             bdNETVENTAS.AddInParameter(comandoBD, "CantidadIngreso", DbType.Int32, detalle.CantidadIngreso);
-            bdNETVENTAS.AddInParameter(comandoBD, "PrecioIngreso", DbType.Decimal, detalle.PrecioIngreso);
+            bdNETVENTAS.AddInParameter(comandoBD, "PrecioIngreso", DbType.Double, detalle.PrecioIngreso);
             bdNETVENTAS.ExecuteNonQuery(comandoBD);
         }
         catch (Exception)
@@ -45,14 +45,14 @@ public class ADVDetalleIngreso
             throw;
         }
     }
-    public DTOVDetalleIngreso Obtener_VDetalleIngreso_OCodigoDetalleIngreso(int codigoDetalle)
+    public DTOVDetalleIngreso Obtener_VDetalleIngreso_O_CodigoIngreso(int codigoIngreso)
     {
         DTOVDetalleIngreso dtoVDetalle = new DTOVDetalleIngreso();
         try
         {
             Database bdNETVENTAS = SBaseDatos.BDNETVENTAS;
-            DbCommand comandoBD = bdNETVENTAS.GetStoredProcCommand("VDetalleIngreso_OCodigoDetalleIngreso");
-            bdNETVENTAS.AddInParameter(comandoBD, "CodigoDetalleIngreso", DbType.Int32, codigoDetalle);
+            DbCommand comandoBD = bdNETVENTAS.GetStoredProcCommand("VDetalleIngreso_O_CodigoIngreso");
+            bdNETVENTAS.AddInParameter(comandoBD, "CodigoIngreso", DbType.Int32, codigoIngreso);
             bdNETVENTAS.LoadDataSet(comandoBD, dtoVDetalle, "VDetalleIngreso");
         }
         catch (Exception)

@@ -35,6 +35,7 @@ public class CVENTAS
     }
 
 
+
     public void Insertar_VCliente_I(int codigoCliente, string razonSocialCliente, string ciONitCliente, string tipoCliente, string direcionCliente, string celularCliente)
     {
         EVCliente eVCliente = new EVCliente();
@@ -110,16 +111,31 @@ public class CVENTAS
 
 
     #region Registro Ingreso
-   
-    public void Insertar_Ingreso(EVIngreso ingreso, List<EVDetalleIngreso> detalleIngresos)
+
+    public void Insertar_Ingreso(EIngreso ingreso, List<EDetalleIngreso> detalleIngresos)
     {
         try
         {
-            int codigoIngreso = asNETVENTAS.Obtener_VIngreso_O_SiguienteCodigoIngreso();
-            asNETVENTAS.Insertar_VIngreso_I(ingreso);
-           
-            foreach (var item in detalleIngresos)
-                asNETVENTAS.Insertar_VDetalleIngreso_I(item);
+            EVIngreso eVIngreso = new EVIngreso();
+            eVIngreso.CodigoIngreso = asNETVENTAS.Obtener_VIngreso_O_SiguienteCodigoIngreso();
+            eVIngreso.CodigoProveedor = ingreso.CodigoProveedor;
+            eVIngreso.CodigoUsuario = ingreso.CodigoUsuario;
+            eVIngreso.FechaIngreso = ingreso.FechaIngreso;
+            eVIngreso.ImpuestoIngreso = ingreso.ImpuestoIngreso;
+            eVIngreso.TotalIngreso = ingreso.TotalIngreso;
+            eVIngreso.EstadoIngreso = ingreso.EstadoIngreso;
+            asNETVENTAS.Insertar_VIngreso_I(eVIngreso);
+            EVDetalleIngreso eVDetalleIngreso = null;
+            foreach (EDetalleIngreso item in detalleIngresos)
+            {
+                eVDetalleIngreso = new EVDetalleIngreso();
+                eVDetalleIngreso.CodigoDetalleIngreso = asNETVENTAS.Obtener_VDetalleIngreso_O_SiguienteCodigoDetalleIngreso();
+                eVDetalleIngreso.CodigoIngreso = eVIngreso.CodigoIngreso;
+                eVDetalleIngreso.CodigoArticulo = item.CodigoArticulo;
+                eVDetalleIngreso.CantidadIngreso = item.CantidadIngreso;
+                eVDetalleIngreso.PrecioIngreso = item.PrecioIngreso;
+                asNETVENTAS.Insertar_VDetalleIngreso_I(eVDetalleIngreso);
+            }
         }
         catch (Exception)
         {

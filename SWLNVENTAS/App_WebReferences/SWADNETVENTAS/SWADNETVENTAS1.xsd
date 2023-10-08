@@ -99,17 +99,17 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Obtener_VDetalleIngreso_O">
+  <xs:element name="Obtener_VDetalleIngreso_O_CodigoIngreso">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="codigoDetalleIngreso" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoIngreso" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Obtener_VDetalleIngreso_OResponse">
+  <xs:element name="Obtener_VDetalleIngreso_O_CodigoIngresoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VDetalleIngreso_OResult" nillable="true" type="q6:EVDetalleIngreso" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VDetalleIngreso_O_CodigoIngresoResult" nillable="true" type="q6:EVDetalleIngreso" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -137,17 +137,17 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Obtener_VIngreso_O_CodigoIngreso">
+  <xs:element name="Obtener_VIngreso_O">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="codigoIngreso" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Obtener_VIngreso_O_CodigoIngresoResponse">
+  <xs:element name="Obtener_VIngreso_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VIngreso_O_CodigoIngresoResult" nillable="true" type="q8:EVIngreso" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_VIngreso_OResult" nillable="true" type="q8:EVIngreso" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

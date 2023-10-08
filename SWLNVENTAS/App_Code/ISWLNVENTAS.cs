@@ -9,6 +9,7 @@ using System.Text;
 
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
 [ServiceContract]
+
 public interface ISWLNVENTAS
 {
     #region Tabla: VCliente
@@ -24,6 +25,11 @@ public interface ISWLNVENTAS
     List<EVCliente> Obtener_VClientes_O_Todo();
     [OperationContract]
     void Eliminar_VCliente_E(int codigoCliente);
+    #endregion
+
+    #region Registro Almacen
+    [OperationContract]
+    void Insertar_Ingreso(EIngreso ingreso, List<EDetalleIngreso> detalleIngresos);
     #endregion
 
     #region Tabla: 2

@@ -45,9 +45,12 @@ public class SWLNVENTAS : ISWLNVENTAS
 
     #endregion
 
-    #region Registro DetalleIngresos
-        
-
+    #region Registro Almacen
+    public void Insertar_Ingreso(EIngreso ingreso, List<EDetalleIngreso> detalleIngresos)
+    {
+        CVENTAS cVENTAS = new CVENTAS();
+        cVENTAS.Insertar_Ingreso(ingreso, detalleIngresos);
+    }
     #endregion
 
     #region Tabla: 3

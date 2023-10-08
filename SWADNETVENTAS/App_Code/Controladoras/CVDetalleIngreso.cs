@@ -33,18 +33,18 @@ public class CVDetalleIngreso
     {
         adVDetalle.Insertar_VDetalleIngreso_I(detalle);
     }
-    public EVDetalleIngreso Obtener_VDetalleIngreso_O(int codigoDetalle)
+    public EVDetalleIngreso Obtener_VDetalleIngreso_O_CodigoIngreso(int codigoIngreso)
     {
         EVDetalleIngreso eVDetalle = null;
-        DTOVDetalleIngreso dtoVDetalle = adVDetalle.Obtener_VDetalleIngreso_OCodigoDetalleIngreso(codigoDetalle);
+        DTOVDetalleIngreso dtoVDetalle = adVDetalle.Obtener_VDetalleIngreso_O_CodigoIngreso(codigoIngreso);
         foreach (DTOVDetalleIngreso.VDetalleIngresoRow drGDetalle in dtoVDetalle.VDetalleIngreso.Rows)
         {
             eVDetalle = new EVDetalleIngreso();
-            eVDetalle.CodigoDetalleIngreso = drGDetalle.CodigoDetalleIngreso;
+            eVDetalle.CodigoDetalleIngreso = drGDetalle.CodigoIngreso;
             eVDetalle.CodigoIngreso = drGDetalle.CodigoIngreso;
             eVDetalle.CodigoArticulo = drGDetalle.CodigoArticulo;
             eVDetalle.CantidadIngreso = drGDetalle.CantidadIngreso;
-            eVDetalle.PrecioIngreso = drGDetalle.PrecioIngreso;
+            eVDetalle.PrecioIngreso = (double)drGDetalle.PrecioIngreso;
         }
         return eVDetalle;
     }

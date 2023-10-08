@@ -47,7 +47,7 @@ public class ADVIngreso
             throw;
         }
     }
-    public DTOVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso)
+    public DTOVIngreso Obtener_VIngreso_O(int codigoIngreso)
     {
         DTOVIngreso dtoVIngreso = new DTOVIngreso();
         try
@@ -78,7 +78,6 @@ public class ADVIngreso
         }
         return dtoVIngreso;
     }
-
     #endregion
 }
 

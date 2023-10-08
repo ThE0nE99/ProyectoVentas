@@ -86,4 +86,17 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Insertar_Ingreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ingreso" nillable="true" type="q3:EIngreso" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="detalleIngresos" nillable="true" type="q4:ArrayOfEDetalleIngreso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_IngresoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

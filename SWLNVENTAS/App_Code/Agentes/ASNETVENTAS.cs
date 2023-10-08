@@ -52,7 +52,7 @@ public class ASNETVENTAS
         EVCliente eVCliente = new EVCliente();
         try
         {
-            swadNETVENTAS.Obtener_VCliente_O(codigoCliente);
+            eVCliente = swadNETVENTAS.Obtener_VCliente_O(codigoCliente);
             return eVCliente;
         }
         catch (Exception)
@@ -101,8 +101,8 @@ public class ASNETVENTAS
     #endregion
 
 
-    #region Insercion: DetalleIngreso
-    public int Obtener_VDetalleIngreso_O_SiguienteCodigoCliente()
+    #region Tabla: DetalleIngreso
+    public int Obtener_VDetalleIngreso_O_SiguienteCodigoDetalleIngreso()
     {
         int res = 0;
         try
@@ -128,13 +128,13 @@ public class ASNETVENTAS
         }
 
     }
-    public EVDetalleIngreso Obtener_DetalleIngreso_O(int codigoDetalle)
+    public EVDetalleIngreso Obtener_VDetalleIngreso_O_CodigoIngreso(int codigoIngreso)
     {
-        EVDetalleIngreso eVCliente = new EVDetalleIngreso();
+        EVDetalleIngreso eVDetalleIngreso = new EVDetalleIngreso();
         try
         {
-            swadNETVENTAS.Obtener_VCliente_O(codigoDetalle);
-            return eVCliente;
+            swadNETVENTAS.Obtener_VDetalleIngreso_O_CodigoIngreso(codigoIngreso);
+            return eVDetalleIngreso;
         }
         catch (Exception)
         {
@@ -171,12 +171,12 @@ public class ASNETVENTAS
         }
 
     }
-    public EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso)
+    public EVIngreso Obtener_VIngreso_O(int codigoIngreso)
     {
         EVIngreso eVIngreso = new EVIngreso();
         try
         {
-            eVIngreso = swadNETVENTAS.Obtener_VIngreso_O_CodigoIngreso(codigoIngreso);
+            eVIngreso = swadNETVENTAS.Obtener_VIngreso_O(codigoIngreso);
             return eVIngreso;
         }
         catch (Exception)

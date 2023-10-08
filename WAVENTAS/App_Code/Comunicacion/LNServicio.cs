@@ -121,6 +121,27 @@ public class LNServicio
         }
     }
     #endregion
+
+    #region Registro Almacen
+
+    // Insertar
+    public void Insertar_Ingreso(EIngreso ingreso, List<EDetalleIngreso> detalleIngresos)
+    {
+
+        try
+        {
+            using (SWLNVENTASClient swlnVENTAS = new SWLNVENTASClient())
+            {
+                swlnVENTAS.Insertar_Ingreso(ingreso, detalleIngresos.ToArray());
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+
     #region Tabla: 2
 
     #endregion

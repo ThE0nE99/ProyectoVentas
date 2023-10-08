@@ -42,6 +42,7 @@ public class SWADNETVENTAS : ISWADNETVENTAS
         cVCliente.Eliminar_VCliente_E(codigoCliente);
     }
     #endregion
+
     #region Tabla: VDetalleIngreso
     public int Obtener_VDetalleIngreso_O_SiguienteCodigoDetalleIngreso()
     {
@@ -53,10 +54,10 @@ public class SWADNETVENTAS : ISWADNETVENTAS
         CVDetalleIngreso cVDetalleIngreso = new CVDetalleIngreso();
         cVDetalleIngreso.Insertar_VDetalleIngreso_I(detalle);
     }
-    public EVDetalleIngreso Obtener_VDetalleIngreso_O(int codigoDetalle)
+    public EVDetalleIngreso Obtener_VDetalleIngreso_O_CodigoIngreso(int codigoIngreso)
     {
         CVDetalleIngreso cVDetalleIngreso = new CVDetalleIngreso();
-        return cVDetalleIngreso.Obtener_VDetalleIngreso_O(codigoDetalle);
+        return cVDetalleIngreso.Obtener_VDetalleIngreso_O_CodigoIngreso(codigoIngreso);
     }
     #endregion
 
@@ -71,10 +72,10 @@ public class SWADNETVENTAS : ISWADNETVENTAS
         CVIngreso cVIngreso = new CVIngreso();
         cVIngreso.Insertar_VIngreso_I(ingreso);
     }
-    public EVIngreso Obtener_VIngreso_O_CodigoIngreso(int codigoIngreso)
+    public EVIngreso Obtener_VIngreso_O(int codigoIngreso)
     {
         CVIngreso cVIngreso = new CVIngreso();
-        return cVIngreso.Obtener_VIngreso_O_CodigoIngreso(codigoIngreso);
+        return cVIngreso.Obtener_VIngreso_O(codigoIngreso);
     }
     public List<EVIngreso> Obtener_VIngreso_O_Todo()
     {

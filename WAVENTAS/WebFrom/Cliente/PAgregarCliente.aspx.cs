@@ -9,9 +9,8 @@ using System.Web.UI.WebControls;
 
 public partial class WebFrom_Cliente_PAgregarCliente : System.Web.UI.Page
 {
-    #region Controladores
-    CCliente cClienteVENTAS = new CCliente();
-    #endregion
+    private CCliente cCliente = new CCliente();
+    private EVCliente eVCliente = new EVCliente();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -27,53 +26,42 @@ public partial class WebFrom_Cliente_PAgregarCliente : System.Web.UI.Page
     }
     protected void btnAgregarCliente_Click(object sender, EventArgs e)
     {
-        CCliente cCliente = new CCliente();
         int codigoCliente = cCliente.Obtener_VCliente_O_SiguienteCodigoCliente();
-        cCliente.Insertar_VCliente_I(codigoCliente, txbRazonSocialCliente.Text, txbCiONitCliente.Text, ddlTipoCliente.Text, txbDirecionCliente.Text,txbCelularCliente.Text);
+        cCliente.Insertar_VCliente_I(codigoCliente, txbRazonSocialCliente.Text, txbCiONitCliente.Text, ddlTipoCliente.Text, txbDirecionCliente.Text, txbCelularCliente.Text);
         lblInsercion.Text = "Agregado con exito";
     }
     protected void btnBuscarCliente_Click(object sender, EventArgs e)
     {
 
-        if (int.Parse(txbCodigoClienteActualizar.Text) > 0)
+        if (int.Parse(txbCodigoCliente.Text) > 0)
         {
-            EVCliente eVcliente = cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteActualizar.Text));
-            if (eVcliente != null)
+            eVCliente = cCliente.Obtener_VCliente_O(int.Parse(txbCodigoCliente.Text));
+            if (eVCliente != null)
             {
-                EVCliente eVCliente = cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteActualizar.Text));
-                lbObtenerCliente.Text = "  RazonSocial Cliente: " + eVCliente.RazonSocialCliente + " CI o NIT: " + eVCliente.CiONitCliente + "  TipoProveedor: " + eVCliente.TipoCliente + "  DireccionCliente: " + eVCliente.DirecionCliente + "  CelularCliente: " + eVCliente.CelularCliente ;
-            }
-        }
-    }
-    protected void btnBuscarClienteActualizar_Click(object sender, EventArgs e)
-    {
-        if (int.Parse(txbCodigoClienteActualizar.Text) > 0)
-        {
-            EVCliente eVcliente = cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteActualizar.Text));
-            if (eVcliente != null)
-            {
-                EVCliente eVCliente = cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteActualizar.Text));
+                lbObtenerCliente.Text = "  RazonSocial Cliente: " + eVCliente.RazonSocialCliente + " CI o NIT: " + eVCliente.CiONitCliente + "  TipoProveedor: " + eVCliente.TipoCliente + "  DireccionCliente: " + eVCliente.DirecionCliente + "  CelularCliente: " + eVCliente.CelularCliente;
                 txbRazonSocialClienteActualizar.Text = eVCliente.RazonSocialCliente;
                 txbCiONitClienteActualizar.Text = eVCliente.CiONitCliente;
                 txbTipoClienteActualizar.Text = eVCliente.TipoCliente;
                 txbDireccActualizar.Text = eVCliente.DirecionCliente;
                 txbCelularClienteActualizar.Text = eVCliente.CelularCliente;
+                txbEstadoActualizar.Text = eVCliente.Estado;
+            }
+            else
+            {
+                lbObtenerCliente.Text = " ";
             }
         }
     }
+  
     protected void btnActualizarCliente_Click(object sender, EventArgs e)
     {
-        cClienteVENTAS.Actualizar_VCliente_A(int.Parse(txbCodigoClienteActualizar.Text), txbRazonSocialClienteActualizar.Text, txbCiONitCliente.Text, txbTipoClienteActualizar.Text, txbDireccActualizar.Text, txbCelularClienteActualizar.Text, txbEstadoActualizar.Text);
+        cCliente.Actualizar_VCliente_A(int.Parse(txbCodigoCliente.Text), txbRazonSocialClienteActualizar.Text, txbCiONitClienteActualizar.Text, txbTipoClienteActualizar.Text, txbDireccActualizar.Text, txbCelularClienteActualizar.Text, txbEstadoActualizar.Text);
     }
     protected void btnBuscarClienteEliminar_Click(object sender, EventArgs e)
     {
         if (int.Parse(txbCodigoClienteEliminar.Text) > 0)
         {
-            EVCliente articulo = cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteEliminar.Text));
-            if (articulo != null)
-            {
-                cClienteVENTAS.Obtener_VCliente_O(int.Parse(txbCodigoClienteEliminar.Text));
-            }
+            cCliente.Eliminar_VCliente_E(int.Parse(txbCodigoClienteEliminar.Text));
         }
     }
 
