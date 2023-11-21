@@ -50,13 +50,25 @@
          <div>
             <asp:Button ID="Button1" runat="server" Text="Ver datos" OnClick="btnVerDatos_Click" CssClass="btn btn-primary" />
         </div>
-        <asp:Label ID="lblCodigo" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblApellido" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblContacto" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblClave" runat="server" Text=""></asp:Label>
-        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
+
+       <table border="1">
+    <tr>
+       
+        <th>Nombre Completo</th>
+        <th>Contacto</th>
+        <th>Correo</th>
+        <th>Clave</th>
+        <th>Estado</th>
+    </tr>
+    <tr>
+     
+        <td><asp:Label ID="lblNombre" runat="server" Text=""></asp:Label></td>
+        <td><asp:Label ID="lblContacto" runat="server" Text=""></asp:Label></td>
+        <td><asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label></td>
+        <td><asp:Label ID="lblClave" runat="server" Text=""></asp:Label></td>
+        <td><asp:Label ID="lblEstado" runat="server" Text=""></asp:Label></td>
+    </tr>
+</table>
     </div>
     
         <hr />

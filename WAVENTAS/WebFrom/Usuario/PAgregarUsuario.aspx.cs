@@ -35,11 +35,11 @@ public partial class WebFrom_Usuario_PAgregarUsuario : System.Web.UI.Page
 
             if (usuario != null)
             {
-                lblNombre.Text = "Nombre Completo: " + usuario.NombresUsuario + " " + usuario.ApellidosUsuario;
-                lblContacto.Text = "Celular:" + usuario.CelularUsuario;
-                lblCorreo.Text = "Correo: " + usuario.CorreoUsuario;
-                lblClave.Text = "Clave: " + usuario.ClaveUsuario;
-                lblEstado.Text = "Estado:" + usuario.Estado;
+                lblNombre.Text = "" + usuario.NombresUsuario + " " + usuario.ApellidosUsuario;
+                lblContacto.Text = "" + usuario.CelularUsuario;
+                lblCorreo.Text = "" + usuario.CorreoUsuario;
+                lblClave.Text = "" + usuario.ClaveUsuario;
+                lblEstado.Text = "" + usuario.Estado;
             }
             else
             {

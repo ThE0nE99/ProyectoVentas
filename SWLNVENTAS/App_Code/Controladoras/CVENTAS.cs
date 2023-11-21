@@ -78,7 +78,6 @@ public class CVENTAS
                 eVDetalleVenta.DescuentoDetalleVenta = item.DescuentoDetalleVenta;
                 asNETVENTAS.Insertar_VDetalleVenta_I(eVDetalleVenta);
             }
-            
         }
         catch (Exception)
         {
