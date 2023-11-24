@@ -7,32 +7,272 @@
       <xsd:import schemaLocation="http://localhost:59753/SWLNVENTAS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ISWLNVENTAS_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_SiguienteCodigoProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_O_SiguienteCodigoProveedor" />
   </wsdl:message>
-  <wsdl:message name="ISWLNVENTAS_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_SiguienteCodigoProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_O_SiguienteCodigoProveedorResponse" />
   </wsdl:message>
-  <wsdl:message name="ISWLNVENTAS_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="ISWLNVENTAS_Insertar_VProveedor_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VProveedor_I" />
   </wsdl:message>
-  <wsdl:message name="ISWLNVENTAS_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="ISWLNVENTAS_Insertar_VProveedor_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VProveedor_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VProveedor_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VProveedor_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VProveedor_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VProveedor_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_Todo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_O_Todo" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VProveedor_O_Todo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VProveedor_O_TodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VProveedor_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VProveedor_E" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VProveedor_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VProveedor_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O_SiguienteCodigoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O_SiguienteCodigoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VCliente_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VCliente_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VCliente_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VCliente_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VCliente_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VCliente_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VCliente_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VCliente_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VCliente_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VCliente_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VCliente_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VClientes_O_Todo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VClientes_O_Todo" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VClientes_O_Todo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VClientes_O_TodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VCliente_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VCliente_E" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VCliente_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VCliente_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Ingreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Ingreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_SiguienteCodigoArticulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_O_SiguienteCodigoArticulo" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_SiguienteCodigoArticulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_O_SiguienteCodigoArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VArticulo_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VArticulo_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VArticulo_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VArticulo_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VArticulo_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VArticulo_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VArticulo_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VArticulo_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_Todo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_O_Todo" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VArticulo_O_Todo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VArticulo_O_TodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VArticulo_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VArticulo_E" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VArticulo_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VArticulo_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Venta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_Venta" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_Venta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O_SiguienteCodigoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O_SiguienteCodigoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VUsuario_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VUsuario_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Insertar_VUsuario_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_VUsuario_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VUsuario_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VUsuario_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Actualizar_VUsuario_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_VUsuario_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_Todo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O_Todo" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Obtener_VUsuario_O_Todo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VUsuario_O_TodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VUsuario_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VUsuario_E" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNVENTAS_Eliminar_VUsuario_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_VUsuario_EResponse" />
   </wsdl:message>
   <wsdl:portType name="ISWLNVENTAS">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/GetData" message="tns:ISWLNVENTAS_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/GetDataResponse" message="tns:ISWLNVENTAS_GetData_OutputMessage" />
+    <wsdl:operation name="Obtener_VProveedor_O_SiguienteCodigoProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_SiguienteCodigoProveedor" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_SiguienteCodigoProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_SiguienteCodigoProveedorResponse" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_SiguienteCodigoProveedor_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/GetDataUsingDataContract" message="tns:ISWLNVENTAS_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/GetDataUsingDataContractResponse" message="tns:ISWLNVENTAS_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="Insertar_VProveedor_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VProveedor_I" message="tns:ISWLNVENTAS_Insertar_VProveedor_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VProveedor_IResponse" message="tns:ISWLNVENTAS_Insertar_VProveedor_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VProveedor_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_OResponse" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VProveedor_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VProveedor_A" message="tns:ISWLNVENTAS_Actualizar_VProveedor_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VProveedor_AResponse" message="tns:ISWLNVENTAS_Actualizar_VProveedor_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VProveedor_O_Todo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_Todo" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_Todo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_TodoResponse" message="tns:ISWLNVENTAS_Obtener_VProveedor_O_Todo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VProveedor_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VProveedor_E" message="tns:ISWLNVENTAS_Eliminar_VProveedor_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VProveedor_EResponse" message="tns:ISWLNVENTAS_Eliminar_VProveedor_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O_SiguienteCodigoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O_SiguienteCodigoCliente" message="tns:ISWLNVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O_SiguienteCodigoClienteResponse" message="tns:ISWLNVENTAS_Obtener_VCliente_O_SiguienteCodigoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VCliente_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VCliente_I" message="tns:ISWLNVENTAS_Insertar_VCliente_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VCliente_IResponse" message="tns:ISWLNVENTAS_Insertar_VCliente_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O" message="tns:ISWLNVENTAS_Obtener_VCliente_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_OResponse" message="tns:ISWLNVENTAS_Obtener_VCliente_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VCliente_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VCliente_A" message="tns:ISWLNVENTAS_Actualizar_VCliente_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VCliente_AResponse" message="tns:ISWLNVENTAS_Actualizar_VCliente_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VClientes_O_Todo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VClientes_O_Todo" message="tns:ISWLNVENTAS_Obtener_VClientes_O_Todo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VClientes_O_TodoResponse" message="tns:ISWLNVENTAS_Obtener_VClientes_O_Todo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VCliente_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_E" message="tns:ISWLNVENTAS_Eliminar_VCliente_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_EResponse" message="tns:ISWLNVENTAS_Eliminar_VCliente_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Ingreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_Ingreso" message="tns:ISWLNVENTAS_Insertar_Ingreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_IngresoResponse" message="tns:ISWLNVENTAS_Insertar_Ingreso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O_SiguienteCodigoArticulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_SiguienteCodigoArticulo" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_SiguienteCodigoArticulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_SiguienteCodigoArticuloResponse" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_SiguienteCodigoArticulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VArticulo_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VArticulo_I" message="tns:ISWLNVENTAS_Insertar_VArticulo_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VArticulo_IResponse" message="tns:ISWLNVENTAS_Insertar_VArticulo_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_OResponse" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VArticulo_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VArticulo_A" message="tns:ISWLNVENTAS_Actualizar_VArticulo_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VArticulo_AResponse" message="tns:ISWLNVENTAS_Actualizar_VArticulo_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O_Todo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_Todo" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_Todo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_TodoResponse" message="tns:ISWLNVENTAS_Obtener_VArticulo_O_Todo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VArticulo_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VArticulo_E" message="tns:ISWLNVENTAS_Eliminar_VArticulo_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VArticulo_EResponse" message="tns:ISWLNVENTAS_Eliminar_VArticulo_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Venta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_Venta" message="tns:ISWLNVENTAS_Insertar_Venta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VentaResponse" message="tns:ISWLNVENTAS_Insertar_Venta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O_SiguienteCodigoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuario" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuarioResponse" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_SiguienteCodigoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VUsuario_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VUsuario_I" message="tns:ISWLNVENTAS_Insertar_VUsuario_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Insertar_VUsuario_IResponse" message="tns:ISWLNVENTAS_Insertar_VUsuario_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_OResponse" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VUsuario_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VUsuario_A" message="tns:ISWLNVENTAS_Actualizar_VUsuario_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Actualizar_VUsuario_AResponse" message="tns:ISWLNVENTAS_Actualizar_VUsuario_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O_Todo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_Todo" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_Todo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_TodoResponse" message="tns:ISWLNVENTAS_Obtener_VUsuario_O_Todo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VUsuario_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VUsuario_E" message="tns:ISWLNVENTAS_Eliminar_VUsuario_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNVENTAS/Eliminar_VUsuario_EResponse" message="tns:ISWLNVENTAS_Eliminar_VUsuario_E_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWLNVENTAS" type="tns:ISWLNVENTAS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/GetData" style="document" />
+    <wsdl:operation name="Obtener_VProveedor_O_SiguienteCodigoProveedor">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_SiguienteCodigoProveedor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -40,8 +280,224 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="Insertar_VProveedor_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_VProveedor_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VProveedor_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VProveedor_A">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Actualizar_VProveedor_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VProveedor_O_Todo">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VProveedor_O_Todo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VProveedor_E">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Eliminar_VProveedor_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O_SiguienteCodigoCliente">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O_SiguienteCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VCliente_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_VCliente_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VCliente_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VCliente_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VCliente_A">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Actualizar_VCliente_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VClientes_O_Todo">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VClientes_O_Todo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VCliente_E">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Eliminar_VCliente_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O_SiguienteCodigoArticulo">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_SiguienteCodigoArticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VArticulo_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_VArticulo_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VArticulo_A">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Actualizar_VArticulo_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VArticulo_O_Todo">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VArticulo_O_Todo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VArticulo_E">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Eliminar_VArticulo_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_Venta">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_Venta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O_SiguienteCodigoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_SiguienteCodigoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_VUsuario_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Insertar_VUsuario_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_VUsuario_A">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Actualizar_VUsuario_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VUsuario_O_Todo">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Obtener_VUsuario_O_Todo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_VUsuario_E">
+      <soap:operation soapAction="http://tempuri.org/ISWLNVENTAS/Eliminar_VUsuario_E" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

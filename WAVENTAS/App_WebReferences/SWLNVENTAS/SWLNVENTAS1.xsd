@@ -1,10 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="CompositeType">
+  <xs:complexType name="EVProveedor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
-      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CelularProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="CorreoProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RazonSocialProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoProveedor" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:element name="EVProveedor" nillable="true" type="tns:EVProveedor" />
+  <xs:complexType name="ArrayOfEVProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVProveedor" nillable="true" type="tns:EVProveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVProveedor" nillable="true" type="tns:ArrayOfEVProveedor" />
+  <xs:complexType name="EVCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CelularCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CiONitCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="DirecionCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RazonSocialCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoCliente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVCliente" nillable="true" type="tns:EVCliente" />
+  <xs:complexType name="ArrayOfEVCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVCliente" nillable="true" type="tns:EVCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVCliente" nillable="true" type="tns:ArrayOfEVCliente" />
+  <xs:complexType name="EIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImpuestoIngreso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalIngreso" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EIngreso" nillable="true" type="tns:EIngreso" />
+  <xs:complexType name="ArrayOfEDetalleIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDetalleIngreso" nillable="true" type="tns:EDetalleIngreso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDetalleIngreso" nillable="true" type="tns:ArrayOfEDetalleIngreso" />
+  <xs:complexType name="EDetalleIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoDetalleIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="PrecioIngreso" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDetalleIngreso" nillable="true" type="tns:EDetalleIngreso" />
+  <xs:complexType name="EVArticulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoriaArticulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NombreArticulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrecioCompraArticulo" type="xs:double" />
+      <xs:element minOccurs="0" name="PrecioVentaArticulo" type="xs:double" />
+      <xs:element minOccurs="0" name="StockArticulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVArticulo" nillable="true" type="tns:EVArticulo" />
+  <xs:complexType name="ArrayOfEVArticulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVArticulo" nillable="true" type="tns:EVArticulo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVArticulo" nillable="true" type="tns:ArrayOfEVArticulo" />
+  <xs:complexType name="EVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaHoraVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImpuestoVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalVenta" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVenta" nillable="true" type="tns:EVenta" />
+  <xs:complexType name="ArrayOfEDetalleVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDetalleVenta" nillable="true" type="tns:EDetalleVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDetalleVenta" nillable="true" type="tns:ArrayOfEDetalleVenta" />
+  <xs:complexType name="EDetalleVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadDetalleVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoDetalleVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="DescuentoDetalleVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="PrecioDetalleVenta" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDetalleVenta" nillable="true" type="tns:EDetalleVenta" />
+  <xs:complexType name="EVUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApellidosUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CelularUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CorreoUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaActulizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NombresUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RolUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EVUsuario" nillable="true" type="tns:EVUsuario" />
+  <xs:complexType name="ArrayOfEVUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVUsuario" nillable="true" type="tns:EVUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVUsuario" nillable="true" type="tns:ArrayOfEVUsuario" />
 </xs:schema>
