@@ -1,4 +1,6 @@
 # ProyectoVentas
+// enlace ha Videos 
+https://www.youtube.com/watch?v=vZRemXrkJAM
 Le recomendamos que se descargue el archivo .rar puesto que se genere un error por el git y revise el Word que esta detallado con imagenes para la configuracion e instalacion respectiva del proyecto. 
     Manual Técnico
 
